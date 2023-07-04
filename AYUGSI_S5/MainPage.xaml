@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AYUGSI_S5.MainPage">
+
+    <StackLayout>
+        <Label Text="CONSUMO DE SERVIVOS"  HorizontalTextAlignment="Center" FontSize="24"></Label>
+
+        <ListView x:Name="ListaEstudiantes">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+
+                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
+                            <Label x:Name="lblApellido" Text="{Binding apellido}"/>
+                            <Label x:Name="lblEdad" Text="{Binding edad}"/>
+
+
+                        </StackLayout>
+
+                    </ViewCell>
+
+                </DataTemplate>
+
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+        <Button x:Name="btnMostrar" Clicked="btnMostrar_Clicked" Text="MOSTRAR"/>
+
+    </StackLayout>
+
+</ContentPage>
