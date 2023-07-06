@@ -32,7 +32,11 @@ namespace AYUGSI_S5
                 parametros.Add("edad", txtEdad.Text);
 
                 client.UploadValues(url, "POST", parametros);
-                DisplayAlert("Alerta", "ingreso corecto ", "cerar");
+                // DisplayAlert("Alerta", "ingreso corecto ", "cerar");
+
+                var mensaje = "DATO INGRESADO";
+
+                DependencyService.Get<mensaje>().LongAlert(mensaje);
 
 
 

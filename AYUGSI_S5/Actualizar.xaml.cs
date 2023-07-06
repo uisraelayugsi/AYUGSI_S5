@@ -38,7 +38,11 @@ namespace AYUGSI_S5
                 parametros.Add("edad", txtEdad.Text);
 
                 client.UploadValues(url + "?codigo=" + txtCodigo.Text + "?nombre=" + txtNombre.Text + "?apellido=" + txtApelldio.Text + "?edad=" + txtEdad.Text, "PUT", parametros);
-                DisplayAlert("Alerta", "Registro ACTUALIZADO correctamente", "Cerrar");
+               // DisplayAlert("Alerta", "Registro ACTUALIZADO correctamente", "Cerrar");
+
+                var mensaje = "REGISTRO  MODIFICADO CORRECTAMENTE";
+
+                DependencyService.Get<mensaje>().LongAlert(mensaje);
 
                 Navigation.PushAsync(new Page1());
             }
@@ -60,7 +64,11 @@ namespace AYUGSI_S5
                 parametros.Add("codigo", txtCodigo.Text);
 
                 client.UploadValues(url + "?codigo=" + txtCodigo.Text, "DELETE", parametros);
-                DisplayAlert("Alerta", "Registro borrado correctamente", "Cerrar");
+                //DisplayAlert("Alerta", "Registro borrado correctamente", "Cerrar");
+
+                var mensaje = "REGISTRO  ELIMINADO CORRECTAMENTE";
+
+                DependencyService.Get<mensaje>().LongAlert(mensaje);
 
                 Navigation.PushAsync(new Page1());
             }

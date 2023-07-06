@@ -50,7 +50,7 @@
                 </ListView.ItemTemplate>
             </ListView>
 
-            <Button x:Name="btnIr" Text="Ir" Clicked="btnIr_Clicked"/>
+            <Button x:Name="btnIr" Text="INSERTAR" Clicked="btnIr_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
