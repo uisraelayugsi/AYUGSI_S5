@@ -66,6 +66,8 @@ namespace AYUGSI_S5
                 client.UploadValues(url + "?codigo=" + txtCodigo.Text, "DELETE", parametros);
                 //DisplayAlert("Alerta", "Registro borrado correctamente", "Cerrar");
 
+
+
                 var mensaje = "REGISTRO  ELIMINADO CORRECTAMENTE";
 
                 DependencyService.Get<mensaje>().LongAlert(mensaje);
